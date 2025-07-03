@@ -1,0 +1,39 @@
+contents of the file: /dotnetcore-webapp-azure-iis/dotnetcore-webapp-azure-iis/pipelines/azure-pipelines-cd.yml
+
+trigger: none
+
+stages:
+- stage: Deploy
+  jobs:
+  - job: DeployToIIS
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        source: 'current'
+        artifact: 'drop'
+        path: '$(Pipeline.Workspace)'
+
+    - powershell: |
+        $ErrorActionPreference = "Stop"
+        $vmName = "<YourAzureVMName>"
+        $resourceGroupName = "<YourResourceGroupName>"
+        $artifactPath = "$(Pipeline.Workspace)\drop\*.zip"
+        $iisPath = "C:\inetpub\wwwroot\<YourIISSiteName>"
+        
+        # Copy the artifact to the Azure VM
+        Invoke-Command -ComputerName $vmName -ResourceGroupName $resourceGroupName -ScriptBlock {
+            param($artifactPath, $iisPath)
+            Expand-Archive -Path $artifactPath -DestinationPath $iisPath -Force
+        } -ArgumentList $artifactPath, $iisPath
+
+        # Restart the IIS site
+        Invoke-Command -ComputerName $vmName -ResourceGroupName $resourceGroupName -ScriptBlock {
+            param($iisSiteName)
+            Restart-WebAppPool -Name $iisSiteName
+        } -ArgumentList "<YourIISSiteName>"
+
+      displayName: 'Deploy to IIS'
+      env:
+        AZURE_DEVOPS_EXT_AZURE_RM_SERVICE_PRINCIPAL_KEY: $(AzureServiceConnection)

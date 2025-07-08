@@ -1,5 +1,4 @@
- contents of the file: /dotnetcore-webapp-azure-iis/dotnetcore-webapp-azure-iis/pipelines/azure-pipelines-cd.yml
- trigger: none
+trigger: none
 
 stages:
 - stage: Deploy
@@ -11,7 +10,6 @@ stages:
       vmImage: 'windows-latest'
     steps:
     - checkout: self
-
     - task: PowerShell@2
       displayName: 'Run install-iis.ps1 via WinRM'
       inputs:

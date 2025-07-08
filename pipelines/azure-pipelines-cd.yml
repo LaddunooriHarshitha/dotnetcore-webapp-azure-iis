@@ -10,24 +10,27 @@ stages:
       vmImage: 'windows-latest'
     steps:
     - checkout: self
-    - task: PowerShell@2
-      displayName: 'Run install-iis.ps1 via WinRM'
-      inputs:
-        targetType: inline
-        script: |
-          $vmIp = "20.40.47.69"  # Replace this with your VM's actual public IP if different
-          $username = "azureuser"
-          $password = "Harshitha@2025"
+     - task: PowerShell@2
+  displayName: 'Run install-iis.ps1 via WinRM'
+  inputs:
+    targetType: inline
+    script: |
+      $vmIp = "20.40.47.69"  # Replace with your VM's public IP
+      $username = "azureuser"
+      $password = "Harshitha@2025"
 
-          $securePassword = ConvertTo-SecureString $password -AsPlainText -Force
-          $cred = New-Object System.Management.Automation.PSCredential ($username, $securePassword)
+      $securePassword = ConvertTo-SecureString $password -AsPlainText -Force
+      $cred = New-Object System.Management.Automation.PSCredential ($username, $securePassword)
 
-          Invoke-Command -ComputerName $vmIp -Port 5985 -UseSSL:$false -Credential $cred -ScriptBlock {
-              Install-WindowsFeature -name Web-Server -IncludeManagementTools
-              Install-WindowsFeature -name Web-Asp-Net45
-              Set-ItemProperty "IIS:\AppPools\DefaultAppPool" -Name "managedRuntimeVersion" -Value "v4.0"
-              Start-Service W3SVC
-              Set-Service W3SVC -StartupType Automatic
-              Write-Host "✅ IIS and ASP.NET installed successfully."
-          }
- 
+      # 🔒 Add to trusted hosts so WinRM can connect without Kerberos
+      Set-Item WSMan:\localhost\Client\TrustedHosts -Value $vmIp -Force
+
+      # Run IIS installation remotely
+      Invoke-Command -ComputerName $vmIp -Port 5985 -UseSSL:$false -Credential $cred -ScriptBlock {
+          Install-WindowsFeature -name Web-Server -IncludeManagementTools
+          Install-WindowsFeature -name Web-Asp-Net45
+          Set-ItemProperty "IIS:\AppPools\DefaultAppPool" -Name "managedRuntimeVersion" -Value "v4.0"
+          Start-Service W3SVC
+          Set-Service W3SVC -StartupType Automatic
+          Write-Host "✅ IIS and ASP.NET installed successfully."
+      }

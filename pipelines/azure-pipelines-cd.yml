@@ -1,4 +1,4 @@
- trigger: none
+trigger: none
 
 stages:
 - stage: Deploy
@@ -30,8 +30,4 @@ stages:
           Invoke-Command -ComputerName $vmIp -Port 5985 -UseSSL:$false -Credential $cred -ScriptBlock {
               Install-WindowsFeature -Name Web-Server -IncludeManagementTools
               Install-WindowsFeature -Name Web-Asp-Net45
-              Set-ItemProperty "IIS:\AppPools\DefaultAppPool" -Name "managedRuntimeVersion" -Value "v4.0"
-              Start-Service W3SVC
-              Set-Service W3SVC -StartupType Automatic
-              Write-Host "✅ IIS and ASP.NET installed successfully."
-          }
+              Set-ItemProperty "IIS:\AppPools\DefaultAppPool" -Name "managedRuntimeVersion" -Valu

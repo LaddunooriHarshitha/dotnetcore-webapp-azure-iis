@@ -7,8 +7,7 @@ stages:
   - job: InstallIIS
     displayName: 'Install IIS on Azure VM'
     pool:
-      name: SelfHosted  # <-- Use your self-hosted agent
-
+      name: Default
     steps:
     - checkout: self
 
@@ -17,7 +16,7 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
-          $vmIp = "20.40.47.69"
+          $vmIp = "20.40.47.69"  # Replace with your VM's IP
           $username = "azureuser"
           $password = "Harshitha@2025"
 

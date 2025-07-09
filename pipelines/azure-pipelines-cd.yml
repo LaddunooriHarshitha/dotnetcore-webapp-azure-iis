@@ -5,9 +5,9 @@ stages:
   displayName: 'Deploy to IIS VM'
   jobs:
   - job: InstallIIS
-    displayName: 'Install IIS on Azure VM'
+    displayName: 'Install IIS on Azure VM via Self-Hosted Agent'
     pool:
-      name: Default
+      name: Default   # Use your self-hosted agent pool name, usually 'Default'
     steps:
     - checkout: self
 
@@ -16,15 +16,14 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
-          $vmIp = "20.40.47.69"  # Replace with your VM's IP
+          $vmIp = "20.40.47.69"  # Replace with your VM's public IP
           $username = "azureuser"
           $password = "Harshitha@2025"
 
           $securePassword = ConvertTo-SecureString $password -AsPlainText -Force
           $cred = New-Object System.Management.Automation.PSCredential ($username, $securePassword)
 
-          Set-Item WSMan:\localhost\Client\TrustedHosts -Value $vmIp -Force
-
+          # Execute IIS installation remotely (TrustedHosts already set manually)
           Invoke-Command -ComputerName $vmIp -Port 5985 -UseSSL:$false -Credential $cred -ScriptBlock {
               Install-WindowsFeature -Name Web-Server -IncludeManagementTools
               Install-WindowsFeature -Name Web-Asp-Net45

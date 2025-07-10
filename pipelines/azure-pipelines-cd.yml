@@ -30,5 +30,5 @@ stages:
               Set-ItemProperty "IIS:\AppPools\DefaultAppPool" -Name "managedRuntimeVersion" -Value "v4.0"
               Start-Service W3SVC
               Set-Service W3SVC -StartupType Automatic
-              Write-Host "✅ IIS and ASP.NET installed successfully."
+              Write-Host " IIS and ASP.NET installed successfully."
           }

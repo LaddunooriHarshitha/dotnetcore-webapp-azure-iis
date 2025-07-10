@@ -54,6 +54,5 @@ This project is a .NET Core web application designed to be deployed to an IIS se
 
 ## Usage
 
-After setting up the project and configuring the pipelines, you can push changes to your GitHub repository. The CI pipeline will automatically trigger to build and test the application, while the CD pipeline will deploy the application to the Azure VM when changes are made to the main branch.
+After setting up the project and configuring the pipelines, We can push changes to your GitHub repository. The CI pipeline will automatically trigger to build and test the application, while the CD pipeline will deploy the application to the Azure VM when changes are made to the main branch.
 
-Make sure to replace any placeholder values in the YAML files and PowerShell scripts with actual values relevant to your Azure environment.

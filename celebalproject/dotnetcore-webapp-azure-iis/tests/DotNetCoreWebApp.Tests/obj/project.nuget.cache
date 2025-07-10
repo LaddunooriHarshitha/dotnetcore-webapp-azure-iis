@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zXtuf0pi9t8=",
+  "dgSpecHash": "mkZsD2oKlaY=",
   "success": false,
-  "projectFilePath": "C:\\Users\\Asus\\OneDrive\\Desktop\\celebalproject\\dotnetcore-webapp-azure-iis\\tests\\DotNetCoreWebApp.Tests\\DotNetCoreWebApp.Tests.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\OneDrive\\Desktop\\iss-serverproject celebal\\dotnetcore-webapp-azure-iis\\celebalproject\\dotnetcore-webapp-azure-iis\\tests\\DotNetCoreWebApp.Tests\\DotNetCoreWebApp.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.mvc.testing\\5.0.0\\microsoft.aspnetcore.mvc.testing.5.0.0.nupkg.sha512",

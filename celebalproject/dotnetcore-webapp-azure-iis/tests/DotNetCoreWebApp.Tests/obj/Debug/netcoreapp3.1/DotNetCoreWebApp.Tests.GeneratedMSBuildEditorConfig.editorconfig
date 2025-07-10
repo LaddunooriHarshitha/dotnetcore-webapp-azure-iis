@@ -1,5 +1,5 @@
 is_global = true
 build_property.RootNamespace = DotNetCoreWebApp.Tests
-build_property.ProjectDir = C:\Users\Asus\OneDrive\Desktop\celebalproject\dotnetcore-webapp-azure-iis\tests\DotNetCoreWebApp.Tests\
+build_property.ProjectDir = C:\Users\Asus\OneDrive\Desktop\iss-serverproject celebal\dotnetcore-webapp-azure-iis\celebalproject\dotnetcore-webapp-azure-iis\tests\DotNetCoreWebApp.Tests\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

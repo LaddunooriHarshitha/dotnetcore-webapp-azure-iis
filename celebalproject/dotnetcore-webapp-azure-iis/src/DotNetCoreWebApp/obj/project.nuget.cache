@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t3d+HFiA4WE=",
+  "dgSpecHash": "pHHmsBiq78I=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\OneDrive\\Desktop\\celebalproject\\dotnetcore-webapp-azure-iis\\src\\DotNetCoreWebApp\\DotNetCoreWebApp.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\OneDrive\\Desktop\\iss-serverproject celebal\\dotnetcore-webapp-azure-iis\\celebalproject\\dotnetcore-webapp-azure-iis\\src\\DotNetCoreWebApp\\DotNetCoreWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

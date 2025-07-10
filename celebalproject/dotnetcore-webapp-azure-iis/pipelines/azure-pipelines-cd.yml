@@ -1,0 +1,37 @@
+<<<<<<< HEAD
+ 
+ trigger: none
+=======
+trigger: none
+>>>>>>> cbaecc9 (Fix YAML syntax error in CD pipeline)
+
+stages:
+- stage: Deploy
+  displayName: 'Deploy to IIS VM'
+  jobs:
+  - job: InstallIIS
+    displayName: 'Install IIS on Azure VM'
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+    - checkout: self
+    - task: PowerShell@2
+      displayName: 'Run install-iis.ps1 via WinRM'
+      inputs:
+        targetType: inline
+        script: |
+          $vmIp = "<YOUR_VM_PUBLIC_IP>"
+          $username = "azureuser"
+          $password = "Harshitha@2025"
+
+          $securePassword = ConvertTo-SecureString $password -AsPlainText -Force
+          $cred = New-Object System.Management.Automation.PSCredential ($username, $securePassword)
+
+          Invoke-Command -ComputerName $vmIp -Port 5985 -UseSSL:$false -ScriptBlock {
+              Install-WindowsFeature -name Web-Server -IncludeManagementTools
+              Install-WindowsFeature -name Web-Asp-Net45
+              Set-ItemProperty "IIS:\AppPools\DefaultAppPool" -Name "managedRuntimeVersion" -Value "v4.0"
+              Start-Service W3SVC
+              Set-Service W3SVC -StartupType Automatic
+              Write-Host "✅ IIS and ASP.NET installed successfully."
+          } -Credential $cred

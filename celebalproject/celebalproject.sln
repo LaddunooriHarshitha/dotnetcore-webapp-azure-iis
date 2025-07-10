@@ -1,0 +1,42 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dotnetcore-webapp-azure-iis", "dotnetcore-webapp-azure-iis", "{812CF46B-BFBA-8016-4374-514F045EE50A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8C8D12AF-8AA8-79D4-C112-23C8CAFD0668}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreWebApp", "dotnetcore-webapp-azure-iis\src\DotNetCoreWebApp\DotNetCoreWebApp.csproj", "{C9BEA560-C0D9-0903-0270-7DE493132406}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0FBA3EC5-17F4-59BC-14A1-BA16DAF5A7A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreWebApp.Tests", "dotnetcore-webapp-azure-iis\tests\DotNetCoreWebApp.Tests\DotNetCoreWebApp.Tests.csproj", "{6BFD89D3-E9BE-23B9-9680-86B8BF9C9AE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9BEA560-C0D9-0903-0270-7DE493132406}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9BEA560-C0D9-0903-0270-7DE493132406}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9BEA560-C0D9-0903-0270-7DE493132406}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9BEA560-C0D9-0903-0270-7DE493132406}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BFD89D3-E9BE-23B9-9680-86B8BF9C9AE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BFD89D3-E9BE-23B9-9680-86B8BF9C9AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BFD89D3-E9BE-23B9-9680-86B8BF9C9AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BFD89D3-E9BE-23B9-9680-86B8BF9C9AE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8C8D12AF-8AA8-79D4-C112-23C8CAFD0668} = {812CF46B-BFBA-8016-4374-514F045EE50A}
+		{C9BEA560-C0D9-0903-0270-7DE493132406} = {8C8D12AF-8AA8-79D4-C112-23C8CAFD0668}
+		{0FBA3EC5-17F4-59BC-14A1-BA16DAF5A7A2} = {812CF46B-BFBA-8016-4374-514F045EE50A}
+		{6BFD89D3-E9BE-23B9-9680-86B8BF9C9AE0} = {0FBA3EC5-17F4-59BC-14A1-BA16DAF5A7A2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {362F4FA4-4265-4402-A58F-099DB74B81E5}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+C:\Users\Asus\OneDrive\Desktop\celebalproject\dotnetcore-webapp-azure-iis\src\DotNetCoreWebApp\obj\Debug\net5.0\DotNetCoreWebApp.csproj.AssemblyReference.cache
+C:\Users\Asus\OneDrive\Desktop\celebalproject\dotnetcore-webapp-azure-iis\src\DotNetCoreWebApp\obj\Debug\net5.0\DotNetCoreWebApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\OneDrive\Desktop\celebalproject\dotnetcore-webapp-azure-iis\src\DotNetCoreWebApp\obj\Debug\net5.0\DotNetCoreWebApp.AssemblyInfoInputs.cache
+C:\Users\Asus\OneDrive\Desktop\celebalproject\dotnetcore-webapp-azure-iis\src\DotNetCoreWebApp\obj\Debug\net5.0\DotNetCoreWebApp.AssemblyInfo.cs
+C:\Users\Asus\OneDrive\Desktop\celebalproject\dotnetcore-webapp-azure-iis\src\DotNetCoreWebApp\obj\Debug\net5.0\DotNetCoreWebApp.csproj.CoreCompileInputs.cache
+C:\Users\Asus\OneDrive\Desktop\celebalproject\dotnetcore-webapp-azure-iis\src\DotNetCoreWebApp\obj\Debug\net5.0\DotNetCoreWebApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Asus\OneDrive\Desktop\celebalproject\dotnetcore-webapp-azure-iis\src\DotNetCoreWebApp\obj\Debug\net5.0\DotNetCoreWebApp.RazorAssemblyInfo.cache
+C:\Users\Asus\OneDrive\Desktop\celebalproject\dotnetcore-webapp-azure-iis\src\DotNetCoreWebApp\obj\Debug\net5.0\DotNetCoreWebApp.RazorAssemblyInfo.cs
+C:\Users\Asus\OneDrive\Desktop\celebalproject\dotnetcore-webapp-azure-iis\src\DotNetCoreWebApp\obj\Debug\net5.0\DotNetCoreWebApp.sourcelink.json

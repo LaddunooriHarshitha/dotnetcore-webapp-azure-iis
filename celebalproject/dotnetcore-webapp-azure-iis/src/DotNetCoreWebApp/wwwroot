@@ -1,0 +1,7 @@
+/dotnetcore-webapp-azure-iis/src/DotNetCoreWebApp/wwwroot
+├── css
+│   └── site.css
+├── js
+│   └── site.js
+└── images
+    └── logo.png

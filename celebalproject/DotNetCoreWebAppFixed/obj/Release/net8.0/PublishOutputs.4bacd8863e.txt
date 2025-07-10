@@ -1,0 +1,7 @@
+C:\Users\Asus\OneDrive\Desktop\celebalproject\DotNetCoreWebAppFixed\publish\DotNetCoreWebAppFixed.exe
+C:\Users\Asus\OneDrive\Desktop\celebalproject\DotNetCoreWebAppFixed\publish\appsettings.Development.json
+C:\Users\Asus\OneDrive\Desktop\celebalproject\DotNetCoreWebAppFixed\publish\appsettings.json
+C:\Users\Asus\OneDrive\Desktop\celebalproject\DotNetCoreWebAppFixed\publish\DotNetCoreWebAppFixed.dll
+C:\Users\Asus\OneDrive\Desktop\celebalproject\DotNetCoreWebAppFixed\publish\DotNetCoreWebAppFixed.deps.json
+C:\Users\Asus\OneDrive\Desktop\celebalproject\DotNetCoreWebAppFixed\publish\DotNetCoreWebAppFixed.runtimeconfig.json
+C:\Users\Asus\OneDrive\Desktop\celebalproject\DotNetCoreWebAppFixed\publish\DotNetCoreWebAppFixed.pdb
